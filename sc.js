@@ -44,7 +44,7 @@ function setup(plugin) {
       );
     }
   });
-  page = new Page(0.1,AddChannel);
+  page = new Page('addchannel', 0.1,AddChannel);
   var CreateButton = React.createClass({
     showChannel: function() {
       if(!chatter.getPanel('right').hasPage(page)) {
@@ -58,7 +58,7 @@ function setup(plugin) {
   });
 
   console.log("Adding Channel to right below channels");
-  chatter.getPanel('left').addPage(plugin, new Page(2, CreateButton));
+  chatter.getPanel('left').addPage(plugin, new Page('createbutton', 2, CreateButton));
 }
 
 
